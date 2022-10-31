@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Content from "./components/Content";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="container">
+      <header className="page-title">
+        <h1>The Job Board</h1>
       </header>
+
+      <div className="all-box">
+        {/* box */}
+
+        <Content
+          title="Full Time Sales Associate - Syndney Boutique"
+          contractType="CDI -"
+          country="Australie -"
+          city="Sydney"
+        />
+
+        <Content
+          title="Agent de Sécurité - Pantin"
+          contractType="CDI -"
+          country="France -"
+          city="Pantin"
+        />
+
+        <Content
+          title="Responsable d'Atelier (H/F)"
+          contractType="CDD -"
+          country="France -"
+          city="Paris"
+        />
+      </div>
+
+      {/* footer */}
+      <footer className="end">
+        <p>Made with React at Le Reacteur By Rico</p>
+      </footer>
     </div>
   );
 }
